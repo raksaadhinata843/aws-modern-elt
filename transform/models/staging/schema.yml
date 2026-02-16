@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_commodities
+    columns:
+      - name: commodity_id
+        tests:
+          - not_null
+      - name: price
+        tests:
+          - not_null
+
