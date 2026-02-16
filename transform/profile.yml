@@ -1,10 +1,10 @@
 athena:
+  target: dev
   outputs:
     dev:
       type: athena
-      s3_staging_dir: ${{ env.S3_STAGING_DIR_ATAU_HARDCODE_AJA }}
-      region_name: "ap-southeast-1"
-      database: aws-bucket-gweh
-      schema: analytics
-
-
+      s3_staging_dir: "{{ env_var('DBT_S3_STAGING_DIR') }}"
+      region_name: "{{ env_var('AWS_REGION') }}"
+      database: awsdatacatalog # Ini biasanya tetap
+      schema: "{{ env_var('DBT_SCHEMA') }}"
+      threads: 1
