@@ -4,7 +4,7 @@ athena:
       type: athena
       s3_staging_dir: ${{ env.S3_STAGING_DIR_ATAU_HARDCODE_AJA }}
       region_name: "ap-southeast-1"
-      database: awsdatacatalog
+      database: aws-bucket-gweh
       schema: analytics
 
 
