@@ -1,0 +1,11 @@
+athena:
+  target: dev
+  outputs:
+    dev:
+      type: athena
+      s3_staging_dir: "s3://nama-bucket-athena-query-results/dbt/"
+      region_name: "ap-southeast-1" # Ganti region lo
+      database: awsdatacatalog
+      schema: analytics
+      threads: 1
+
