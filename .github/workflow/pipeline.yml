@@ -35,7 +35,7 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "ap-southeast-1" # Ganti region lo
+          AWS_REGION: "ap-southeast-3" # Ganti region lo
         run: |
           aws lambda update-function-code \
             --function-name my-eia-ingest-lambda \
@@ -68,7 +68,7 @@ jobs:
           # Pastikan variabel ini dipake di profiles.yml lo
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "ap-southeast-1"
+          AWS_REGION: "ap-southeast-3"
         run: |
           cd transform
           # Kita panggil dbt run dan dbt test biar kualitas data terjaga
