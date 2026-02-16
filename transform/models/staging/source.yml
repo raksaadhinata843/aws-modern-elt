@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw_eia
+    database: awsdatacatalog
+    schema: raw_db # Ganti sesuai nama database di Glue lo
+    tables:
+      - name: commodity_data # Nama tabel hasil crawl/Terraform
+
